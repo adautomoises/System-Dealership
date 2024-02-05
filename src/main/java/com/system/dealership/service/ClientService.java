@@ -4,6 +4,7 @@ import com.system.dealership.model.Client;
 import com.system.dealership.repository.ClientRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.UUID;
@@ -17,14 +18,17 @@ public class ClientService {
         return repository.findAll();
     }
 
+    @Transactional
     public Client postClient(Client client){
         return repository.save(client);
     }
 
+    @Transactional
     public Client putClient(Client client){
         return repository.save(client);
     }
 
+    @Transactional
     public Void deleteClient(UUID id){
         repository.deleteById(id);
         return null;

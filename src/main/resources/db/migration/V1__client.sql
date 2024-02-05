@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS CLIENT (
-    id UUID Primary Key,
+    id UUID PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     email VARCHAR(128) NOT NULL,
     phone_number VARCHAR(32) NOT NULL,
